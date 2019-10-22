@@ -14,6 +14,7 @@ body {
 /* Logo and Navigation Menu */
 
 header{
+    background-color: #373737;
     overflow: hidden;
     width: 100%;
     display: inline-flex;
