@@ -70,8 +70,8 @@ header{
 
 main {
     padding-top: 60px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
 }
 
 .title {
@@ -81,18 +81,19 @@ main {
 /* Portrait + Bio */
 
 .welcome {
+    grid-column: 2;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 #portrait img {
-    max-width: 250px
+    max-width: 250px;
+    grid-row: 1;
 }
 
 #bio {
-    padding-left: 5%;
     padding-top: 1%;
+    grid-row: 1;
+    padding-left: 5%;
 }
 
 #bio h1 {
@@ -126,14 +127,7 @@ main {
 /* Skills */
 
 #skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#skills h1 {
-    position: relative;
-    left: -18.4%;
+    grid-column: 2;
 }
 
 #skills p {
@@ -149,73 +143,47 @@ main {
 /* Experience */
 
 #experience {
-    margin-top: 1%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-column: 2;
 }
 
-#experience h1 {
-    position: relative;
-    left: -12.65%;
-}
 
 #experience h3 {
     padding-top: 1%;
-    position: relative;
-    left: -10.5%;
     font-size: 1.4em;
 }
 
 #experience h4 {
-    position: relative;
-    left: -11.5%;
     font-weight: normal;
     font-size: 1.1em;
 }
 
 #experience ul {
-    position: relative;
-    left: -6%;
+    padding-left: 5%;
 }
 
 /* Projects */
 
 #projects {
     margin-top: 1%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#projects h1 {
-    position: relative;
-    left: -17.35%;
+    grid-column: 2;
 }
 
 .project img {
     padding-top: 3%;
-    position: relative;
-    left: -26%;
 }
 
 .project h3 {
     padding-top: 1%;
-    position: relative;
-    left: -26%;
     font-size: 1.3em;
 }
 
 .project a {
     padding-top: .5%;
-    position: relative;
-    left: -26%;
 }
 
 .project p {
     padding-top: .5%;
     position: relative;
-    left: -26%;
 }
 
 /* Media Queries */
@@ -224,7 +192,45 @@ main {
     .nav-menu {
         display: none;
     }
+    main {
+        grid-template-columns: none;
+        width: auto;
+    }
     .welcome {
         flex-direction: column;
+        padding-left: 1%;
+    }
+    #portrait img {
+        padding-left: 24%;
+    }
+    #bio {
+        padding-left: 0%;
+    }
+    #bio h1 {
+        padding-left: 20%;
+    }
+    #bio h5 {
+        padding-left: 24%;
+    }
+    #social-media-icons {
+        padding-left: 37%;
+    }
+    #skills {
+        padding-left: 1%;
+    }
+    #experience {
+        padding-left: 1%;
+    }
+    #projects h1 {
+        padding-left: 1%;
+    }
+    #projects h3 {
+        padding-left: 1%;
+    }
+    #projects a {
+        padding-left: 1%;
+    }
+    #projects p {
+        padding-left: 1%;
     }
 }
