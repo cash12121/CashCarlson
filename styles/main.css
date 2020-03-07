@@ -68,56 +68,154 @@ header{
 
 /* Start with Main Body */
 
+main {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-decoration: underline;
+}
+
 /* Portrait + Bio */
 
-div#welcome {
-    position: relative;
-    margin: auto;
-    padding-top: 60px;
-    width: 100%;
-    overflow: auto;
+.welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-div#bio {
-    margin: auto;
-    width: 75%;
-    padding-top: 3em;
-    padding-left: 5em;
-    display: inline-block;
+#portrait img {
+    max-width: 250px
 }
 
-div#bio h5 {
-    padding-top: 0.25em;
-    color: #292929;
+#bio {
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+#bio h1 {
+    font-size: 3em;
+}
+
+#bio h5 {
     font-size: 1.1em;
+    color: #292929;
+    font-style: italic;
     font-weight: normal;
 }
 
-div#bio p {
-    padding-top: .25em;
-    font-size: 1em;
-    line-height: 26px;
+#bio p {
+    padding-top: 1.5%;
+    font-size: 1.1em;
 }
 
-div#social-media-icons img {
-    max-width: 64px;
-    padding-top: 16px;
-    padding-right: 8px;
+#social-media-icons {
+    padding-top: 1%;
 }
 
 #github-icon img {
-    width: 54px;
+    max-width: 45px;
 }
 
-div#portrait {
-    padding-left: 10%;
+#linkedin-icon img {
+    max-width: 50px;
 }
 
-div#portrait img {
-    float: left;
-    width: 75%;
-    max-width: 350px;
-    max-height: 350px;
+/* Skills */
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills h1 {
+    position: relative;
+    left: -18.4%;
+}
+
+#skills p {
+    padding-top: 0.5%;
+    font-size: 1.5em;
+    line-height: 150%;
+}
+
+#skills p strong {
+    text-decoration: underline;
+}
+
+/* Experience */
+
+#experience {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#experience h1 {
+    position: relative;
+    left: -12.65%;
+}
+
+#experience h3 {
+    padding-top: 1%;
+    position: relative;
+    left: -10.5%;
+    font-size: 1.4em;
+}
+
+#experience h4 {
+    position: relative;
+    left: -11.5%;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+#experience ul {
+    position: relative;
+    left: -6%;
+}
+
+/* Projects */
+
+#projects {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects h1 {
+    position: relative;
+    left: -17.35%;
+}
+
+.project img {
+    padding-top: 3%;
+    position: relative;
+    left: -26%;
+}
+
+.project h3 {
+    padding-top: 1%;
+    position: relative;
+    left: -26%;
+    font-size: 1.3em;
+}
+
+.project a {
+    padding-top: .5%;
+    position: relative;
+    left: -26%;
+}
+
+.project p {
+    padding-top: .5%;
+    position: relative;
+    left: -26%;
 }
 
 /* Media Queries */
@@ -125,5 +223,8 @@ div#portrait img {
 @media screen and (max-width: 600px) {
     .nav-menu {
         display: none;
+    }
+    .welcome {
+        flex-direction: column;
     }
 }
