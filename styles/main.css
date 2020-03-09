@@ -200,6 +200,19 @@ main {
     position: relative;
 }
 
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #373737;
+    height: 50px;
+    color: #FFFFFF;
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 600px) {
